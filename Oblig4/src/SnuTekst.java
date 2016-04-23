@@ -9,6 +9,13 @@ public class SnuTekst {
 		String s = scanner.nextLine();
 		System.out.println("Reversert: ");
 		baklengs(s);
+		int counter = 0;
+		for (int i = 0; i < s.length(); i++) {
+			if (Character.isLetter(s.charAt(i)))
+				counter++;
+		}
+		System.out.println("\nDette inneholder " + counter + " bokstaver.");
+
 	}
 
 	public static void baklengs(String tekst) {
@@ -21,5 +28,6 @@ public class SnuTekst {
 			System.out.print(tekst.substring(0, 1));
 
 		}
+
 	}
 }
